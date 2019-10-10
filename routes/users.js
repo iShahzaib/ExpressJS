@@ -19,8 +19,4 @@ router.post('/', function(req, res, next) {
   res.send('Account has been created');
 });
 
-router.get('/list', function(req, res) {
-  res.render('index', { title: 'User List' });
-});
-
 module.exports = router;
