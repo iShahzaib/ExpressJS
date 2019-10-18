@@ -1,0 +1,66 @@
+<h1>HOW TO INSERT, UPDATE AND DELETE DATA IN MONGODB USING EXPRESSJS</h1>
+<section class="card">
+    <h3>Insert Data</h3>
+    <form action="/insert" method="post">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <input type="text" id="content" name="content" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" class="form-control">
+        </div></br>
+        <button type="submit" class="btn btn-primary">INSERT</button>
+    </form>
+</section>
+<section class="card">
+    <h3>Get Data</h3>
+    <a href="/get-data"><mark>LOAD DATA</mark></a>
+    <div>
+        {{# each items }}
+            <article class="item">
+                <div>Title: {{ this.title }}</div>
+                <div>Content: {{ this.content }}</div>
+                <div>Author: {{ this.author }}</div>
+                <div>ID: {{ this._id }}</div>
+            </article>
+        {{/each}}
+    </div>
+</section>
+<section class="card">
+    <h3>Update Data</h3>
+    <form action="/update" method="post">
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <input type="text" id="content" name="content" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" class="form-control">
+        </div></br>
+        <button type="submit" class="btn btn-success">UPDATE</button>
+    </form>
+</section>
+</section>
+<section class="card">
+    <h3>Delete Data</h3>
+    <form action="/delete" method="post">
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" class="form-control">
+        </div></br>
+        <button type="submit" class="btn btn-danger">DELETE</button>
+    </form>
+</section>
