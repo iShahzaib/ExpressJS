@@ -1,6 +1,4 @@
 /.idea
 /node_modules
 
-# Ignore file named 'package-lock.json'
-
-package-lock.json
+echo package-lock.json>.gitignore
