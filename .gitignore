@@ -1,4 +1,4 @@
 /.idea
 /node_modules
 
-echo package-lock.json>.gitignore
+/.package-lock.json
